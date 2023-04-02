@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+
+    <title>Calorie Calculator</title>
+  </head>
+  <body>
+    <div class="calculator-container">
+      <form class="form-container">
+        <h2 class="heading--1">Calorie Calculator</h2>
+
+        <div>
+          <label for="ingredient-name">Ingredient Name</label>
+          <input id="ingredient-name" type="text" placeholder="Sugar" />
+        </div>
+        <div>
+          <label for="amount">Amount</label>
+          <input id="amount" type="text" placeholder="Format: 120,gr" />
+        </div>
+        <div>
+          <label for="calories">Calorie</label>
+          <input id="calories" type="text" placeholder="460" />
+        </div>
+
+        <p class="message"></p>
+
+        <div class="buttons">
+          <button class="btn btn--add" type="submit" value="Add ingredients">
+            Add ingredient
+          </button>
+          <button
+            class="btn btn--calculate"
+            type="submit"
+            value="Calculate calories"
+          >
+            Calculate calories
+          </button>
+        </div>
+      </form>
+      <div class="list-container">
+        <h2 class="heading--2">Ingredients</h2>
+
+        <p class="welcome-message">
+          🙂 Starting by entering an ingredient to calculate calories. Have fun!
+        </p>
+
+        <div id="recipe__ingredients" class="recipe__ingredients hidden">
+          <ol class="ingredient-list" id="list"></ol>
+        </div>
+        <div id="total-calories" class="total-calories">
+          <div id="result-message" class="result-message"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

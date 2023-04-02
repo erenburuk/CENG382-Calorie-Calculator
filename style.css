@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #333;
+  background: linear-gradient(to top left, #28b487, #7dd56f);
+}
+
+.calculator-container {
+  width: 1000px;
+  margin: 100px auto;
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  border-radius: 11px;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  align-items: center;
+  row-gap: 24px;
+  border-radius: 11px 0 0 11px;
+}
+
+.form-container label {
+  display: block;
+  width: 400px;
+  margin-bottom: 4px;
+}
+
+.form-container input {
+  display: block;
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 9px;
+  border: none;
+  background-color: #f4fce3;
+}
+
+.form-container input:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(253, 242, 233, 0.5);
+}
+
+.heading--1,
+.heading--2 {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 8px;
+  margin: 24px auto;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.heading--1 {
+  border-bottom: 4px solid #7dd56f;
+}
+
+.heading--2 {
+  margin-bottom: 48px;
+  border-bottom: 4px solid #7dd56f;
+}
+
+.buttons {
+  display: flex;
+  margin: 8px 0 48px 0;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #74b816;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 9px;
+  padding: 16px 32px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn--form:hover {
+  background-color: #fdf2e9;
+  color: #f48982;
+}
+
+.btn--add {
+  margin-right: 24px;
+  background-color: #fff;
+  color: #74b816;
+  outline: 1px solid #74b816;
+}
+
+.btn--add:hover {
+  color: #fff;
+  background-color: #74b816;
+}
+
+.btn--calculate:hover {
+  background-color: #5c940d;
+}
+
+.list-container {
+  background-color: #e9fac8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0 11px 11px 0;
+}
+
+ol {
+  list-style: none;
+  counter-reset: item;
+}
+
+.ingredient-list li {
+  counter-increment: item;
+}
+
+.ingredient-list li:before {
+  margin-right: 16px;
+  content: counter(item);
+  background: #94d82d;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+}
+
+.ingredient-list {
+  display: grid;
+  row-gap: 12px;
+  font-size: 16px;
+}
+
+.recipe__ingredients {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: #fff;
+  width: 400px;
+  padding: 32px 48px;
+  margin-bottom: 24px;
+  border-radius: 9px;
+}
+
+.welcome-message {
+  font-size: 18px;
+  font-weight: 500;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 5rem 4rem;
+  display: flex;
+  text-align: center;
+}
+
+.total-calories {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  /*   background-color: #82c91e; */
+  color: #212529;
+  margin-bottom: 12px;
+}
+
+.total-heading {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.total-amount {
+  font-size: 24px;
+}
+
+.result-message {
+  font-size: 18px;
+}
+
+.hidden {
+  display: none;
+}
